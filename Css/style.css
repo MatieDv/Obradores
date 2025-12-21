@@ -1,0 +1,12 @@
+body {
+  background-image: url("../asset/photo_2025-12-20_19-21-29.jpg");
+  background-size: cover;        
+  background-position: center;   
+  background-repeat: no-repeat;
+  background-attachment: scroll; 
+  min-height: 100svh;            
+}
+
+#tiulo{
+    color: aliceblue;
+}

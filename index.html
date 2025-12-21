@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cafeOscuro: '#4B230F',
+            cafe: '#75391C',
+            crema: '#F9DCB4',
+            trigo: '#EDA342'
+          },
+          fontFamily: {
+            titulo: ['Playfair Display', 'serif'],
+            texto: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <title>Obradores Menú</title>
+</head>
+
+<body
+  class="font-texto text-cafeOscuro min-h-screen bg-cover bg-center bg-no-repeat relative"
+  style="background-image: url('../asset/photo_2025-12-20_19-21-29.jpg');"
+>
+
+  <!-- OVERLAY -->
+  <div class="absolute inset-0 bg-crema/80"></div>
+
+  <!-- CONTENIDO -->
+  <div class="relative z-10">
+
+    <!-- HEADER -->
+    <header class="bg-cafe/90 text-crema px-4 py-4">
+      <div class="flex items-center gap-3 max-w-4xl mx-auto">
+
+        <!-- LOGO -->
+        <img 
+          src="../asset/logo.jpeg"
+          alt="Logo Obradores"
+          class="w-10 h-10 md:w-12 md:h-12 object-contain"
+        >
+
+        <!-- TEXTO -->
+        <div>
+          <h1 class="font-titulo text-xl md:text-2xl leading-tight">
+            Obradores
+          </h1>
+          <p class="text-xs md:text-sm">
+            Fresco todos los días
+          </p>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="max-w-4xl mx-auto px-4 py-6 space-y-8">
+
+      <!-- BEBIDAS -->
+      <section class="bg-crema/90 rounded-xl p-4 shadow">
+        <h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
+          <i data-lucide="glass-water" class="w-6 h-6 text-trigo"></i>
+          Bebidas
+        </h2>
+        <ul class="space-y-1">
+          <li>Jugo de pomelo 500cc</li>
+          <li>Levité de pomelo 500ml</li>
+          <li>Pepsi 500ml</li>
+          <li>Pepsi Black 500ml</li>
+          <li>Seven Up 500ml</li>
+        </ul>
+      </section>
+
+      <!-- PANIFICADOS -->
+      <section class="bg-crema/90 rounded-xl p-4 shadow">
+        <h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
+          <i data-lucide="wheat" class="w-6 h-6 text-trigo"></i>
+          Panificados
+        </h2>
+        <ul class="space-y-1">
+          <li>Alfajor grande clásico tapitas</li>
+          <li>Budín chips marmolado</li>
+          <li>Porción budín</li>
+          <li>Chipa</li>
+          <li>Chipasito 250g</li>
+          <li>Cuadrado raffi chips</li>
+          <li>Medialuna rellena de pistacho</li>
+          <li>Pan bagel unidad</li>
+          <li>Pan casero</li>
+          <li>Pan cebolla 450g</li>
+          <li>Pan de campo</li>
+          <li>Pan de mesa integral</li>
+          <li>Pan dulce fruto seco</li>
+          <li>Pan figaza x6</li>
+          <li>Pan figaza XL</li>
+          <li>Pan flauta</li>
+          <li>Pan integral grande</li>
+          <li>Pan integral x6</li>
+          <li>Pan miñón x6</li>
+          <li>Pan redondo</li>
+          <li>Pasta frola batata</li>
+          <li>Pasta frola membrillo</li>
+          <li>Pasta frola pastelera</li>
+          <li>Pepas 250g</li>
+          <li>Pepas de frutos rojos</li>
+        </ul>
+      </section>
+
+      <!-- EMPANADAS -->
+      <section class="bg-crema/90 rounded-xl p-4 shadow">
+        <h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
+          <i data-lucide="croissant" class="w-6 h-6 text-trigo"></i>
+          Empanadas
+        </h2>
+        <ul class="space-y-1">
+          <li>Empanada carne suave</li>
+          <li>Empanada de pollo</li>
+          <li>Empanada jamón y queso</li>
+        </ul>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>
