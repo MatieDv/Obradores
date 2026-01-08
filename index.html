@@ -4,15 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Tailwind config -->
   <script>
     tailwind.config = {
       theme: {
@@ -35,116 +32,226 @@
   <title>Obradores Menú</title>
 </head>
 
-<body
-  class="font-texto text-cafeOscuro min-h-screen bg-cover bg-center bg-no-repeat relative"
-  style="background-image: url('../asset/photo_2025-12-20_19-21-29.jpg');"
->
+<body 
+    class="font-texto text-cafeOscuro relative"
+  style="
+    background-image: url('../asset/descarga.jpg');
+    background-repeat: repeat;
+    background-size: 320px;
+    min-height: 100dvh;
+  " 
+  
+  >  
+ <div class="pointer-events-none fixed inset-0 z-0">
+  <!-- Capa negra suave -->
+  <div class="absolute inset-0 bg-black/40"></div>
 
-  <!-- OVERLAY -->
-  <div class="absolute inset-0 bg-crema/80"></div>
+  <!-- Bordes más oscuros -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/70"></div>
+</div>
+<div class="relative z-10">
 
-  <!-- CONTENIDO -->
-  <div class="relative z-10">
-
-    <!-- HEADER -->
-    <header class="bg-cafe/90 text-crema px-4 py-4">
-      <div class="flex items-center gap-3 max-w-4xl mx-auto">
-
-        <!-- LOGO -->
-        <img 
-          src="../asset/logo.jpeg"
-          alt="Logo Obradores"
-          class="w-10 h-10 md:w-12 md:h-12 object-contain"
-        >
-
-        <!-- TEXTO -->
-        <div>
-          <h1 class="font-titulo text-xl md:text-2xl leading-tight">
-            Obradores
-          </h1>
-          <p class="text-xs md:text-sm">
-            Fresco todos los días
-          </p>
-        </div>
-
-      </div>
-    </header>
-
-    <!-- MAIN -->
-    <main class="max-w-4xl mx-auto px-4 py-6 space-y-8">
-
-      <!-- BEBIDAS -->
-      <section class="bg-crema/90 rounded-xl p-4 shadow">
-        <h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
-          <i data-lucide="glass-water" class="w-6 h-6 text-trigo"></i>
-          Bebidas
-        </h2>
-        <ul class="space-y-1">
-          <li>Jugo de pomelo 500cc</li>
-          <li>Levité de pomelo 500ml</li>
-          <li>Pepsi 500ml</li>
-          <li>Pepsi Black 500ml</li>
-          <li>Seven Up 500ml</li>
-        </ul>
-      </section>
-
-      <!-- PANIFICADOS -->
-      <section class="bg-crema/90 rounded-xl p-4 shadow">
-        <h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
-          <i data-lucide="wheat" class="w-6 h-6 text-trigo"></i>
-          Panificados
-        </h2>
-        <ul class="space-y-1">
-          <li>Alfajor grande clásico tapitas</li>
-          <li>Budín chips marmolado</li>
-          <li>Porción budín</li>
-          <li>Chipa</li>
-          <li>Chipasito 250g</li>
-          <li>Cuadrado raffi chips</li>
-          <li>Medialuna rellena de pistacho</li>
-          <li>Pan bagel unidad</li>
-          <li>Pan casero</li>
-          <li>Pan cebolla 450g</li>
-          <li>Pan de campo</li>
-          <li>Pan de mesa integral</li>
-          <li>Pan dulce fruto seco</li>
-          <li>Pan figaza x6</li>
-          <li>Pan figaza XL</li>
-          <li>Pan flauta</li>
-          <li>Pan integral grande</li>
-          <li>Pan integral x6</li>
-          <li>Pan miñón x6</li>
-          <li>Pan redondo</li>
-          <li>Pasta frola batata</li>
-          <li>Pasta frola membrillo</li>
-          <li>Pasta frola pastelera</li>
-          <li>Pepas 250g</li>
-          <li>Pepas de frutos rojos</li>
-        </ul>
-      </section>
-
-      <!-- EMPANADAS -->
-      <section class="bg-crema/90 rounded-xl p-4 shadow">
-        <h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
-          <i data-lucide="croissant" class="w-6 h-6 text-trigo"></i>
-          Empanadas
-        </h2>
-        <ul class="space-y-1">
-          <li>Empanada carne suave</li>
-          <li>Empanada de pollo</li>
-          <li>Empanada jamón y queso</li>
-        </ul>
-      </section>
-
-    </main>
-
+<header class="bg-cafe/90 text-crema px-4 py-4">
+  <div class="flex items-center gap-3 max-w-4xl mx-auto">
+    <img src="../asset/logo.jpeg" class="w-10 h-10 object-contain">
+    <div>
+      <h1 class="font-titulo text-xl">Obradores</h1>
+      <p class="text-xs">Fresco todos los días</p>
+    </div>
   </div>
+</header>
 
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    lucide.createIcons();
-  </script>
+<main class="max-w-4xl mx-auto px-4 py-6 space-y-8">
+
+<!-- PANADERÍA -->
+<section class="bg-crema/90 rounded-xl p-4 shadow">
+<h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
+<i data-lucide="wheat" class="w-6 h-6 text-trigo"></i> Panadería
+</h2>
+<ul class="space-y-1">
+<li class="flex justify-between">Pan miñón común x6 <span class="text-emerald-500">$1500</span></li>
+<li class="flex justify-between">Pan miñón integral x6 <span class="text-emerald-500">$1500</span></li>
+<li class="flex justify-between">Integral de campo grande <span class="text-emerald-500">$18000</span></li>
+<li class="flex justify-between">Pan flauta <span class="text-emerald-500">$900</span></li>
+<li class="flex justify-between">Sandwich jamón y queso <span>-</span></li>
+<li class="flex justify-between">Tostado jamón y queso <span class="text-emerald-500">$3000</span></li>
+</ul>
+</section>
+
+<!-- PANADERÍA SABORIZADOS -->
+<section class="bg-crema/90 rounded-xl p-4 shadow">
+<h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
+<i data-lucide="wheat" class="w-6 h-6 text-trigo"></i> Panadería saborizados
+</h2>
+<ul class="space-y-1">
+<li class="flex justify-between">Cremona Grande común sabores(Ajo, Orégano, Pizza) <span class="text-emerald-500">$2500</span></li>
+<li class="flex justify-between">Librito c/u <span class="text-emerald-500">$900</span></li>
+<li class="flex justify-between">Cuernitos c/u <span class="text-emerald-500">$900</span></li>
+<li class="flex justify-between">Chipá clásico c/u <span class="text-emerald-500">$1400</span></li>
+<li class="flex justify-between">Scons de queso c/u <span class="text-emerald-500">$3500</span></li>
+</ul>
+</section>
+
+<!-- PASTELERÍA -->
+<section class="bg-crema/90 rounded-xl p-4 shadow">
+<h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
+<i data-lucide="croissant" class="w-6 h-6 text-trigo"></i> Pastelería
+</h2>
+<ul class="space-y-1">
+<li class="flex justify-between">Medialunas de manteca <span class="text-emerald-500">$909</span></li>
+<li class="flex justify-between">Medias de grasa <span class="text-emerald-500">$900</span></li>
+<li class="flex justify-between">Facturas surtidas <span class="text-emerald-500">$1500</span></li>
+<li class="flex justify-between">Croissant <span class="text-emerald-500">$2600</span></li>
+</ul>
+
+<h2 class="font-titulo text-xl text-cafe mb-3 mt-2 flex items-center gap-2">
+<i data-lucide="cake" class="w-6 h-6 text-trigo"></i> Budines
+</h2>
+<ul class="space-y-1">
+<li class="flex justify-between">Limón <span class="text-emerald-500">$8000</span></li>
+<li class="flex justify-between">Black Oreo <span class="text-emerald-500">$8000</span></li>
+<li class="flex justify-between">Chico navideño <span class="text-emerald-500">$6000</span></li>
+<li class="flex justify-between">Chips marmolado <span class="text-emerald-500">$6000</span></li>
+<li class="flex justify-between">Chocolate <span class="text-emerald-500">$6000</span></li>
+<li class="flex justify-between">Budín grande manzana <span class="text-emerald-500">$12000</span></li>
+<li class="flex justify-between">Budín grande chocolate <span class="text-emerald-500">$12000</span></li>
+<li class="flex justify-between">Porción budín <span class="text-emerald-500">$3800</span></li>
+</ul>
+<h2 class="font-titulo text-xl text-cafe mb-3 mt-2 flex items-center gap-2">
+<i data-lucide="cake" class="w-6 h-6 text-trigo"></i> Muffins
+</h2>
+<ul class="space-y-1">
+<li class="flex justify-between">Chocolate <span class="text-emerald-500">$2000</span></li>
+<li class="flex justify-between">Vainilla <span class="text-emerald-500">$2000</span></li>
+</ul>
+
+</section>
+
+<!-- ALFAJORES -->
+<section class="bg-crema/90 rounded-xl p-4 shadow">
+<h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
+<i data-lucide="cookie" class="w-6 h-6 text-trigo"></i> Alfajores & Cookies
+</h2>
+<ul class="space-y-1">
+<li class="flex justify-between">Alfajor grande bananita <span class="text-emerald-500">$3000</span></li>
+<li class="flex justify-between">Alfajor Marroc <span class="text-emerald-500">$3000</span></li>
+<li class="flex justify-between">Alfajor grande Maizena <span class="text-emerald-500">$3000</span></li>
+<li class="flex justify-between">Cookies clásicas <span class="text-emerald-500">$2500</span></li>
+<li class="flex justify-between">Cookies Ferrero <span class="text-emerald-500">$3500</span></li>
+<li class="flex justify-between">Cookies Kinder <span class="text-emerald-500">$3500</span></li>
+</ul>
+</section>
+
+<!-- PASTA FROLA -->
+<section class="bg-crema/90 rounded-xl p-4 shadow">
+<h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
+<i data-lucide="pie-chart" class="w-6 h-6 text-trigo"></i> Pasta Frola
+</h2>
+<ul class="space-y-1">
+<li class="flex justify-between">Membrillo <span class="text-emerald-500">$6000</span></li>
+<li class="flex justify-between">Pastelera <span class="text-emerald-500">$5000</span></li>
+<li class="flex justify-between">Batata <span class="text-emerald-500">$5000</span></li>
+<li class="flex justify-between">Dulce de leche <span class="text-emerald-500">$5000</span></li>
+</ul>
+</section>
+
+<!-- CUADRADO RAFFI -->
+<section class="bg-crema/90 rounded-xl p-4 shadow">
+<h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
+<i data-lucide="square" class="w-6 h-6 text-trigo"></i> Cuadrado Raffi
+</h2>
+<ul class="space-y-1">
+<li class="flex justify-between">Limón <span class="text-emerald-500">$4000</span></li>
+<li class="flex justify-between">Naranja <span class="text-emerald-500">$4000</span></li>
+<li class="flex justify-between">Zanahoria <span class="text-emerald-500">$4000</span></li>
+<li class="flex justify-between">Vainilla chips <span class="text-emerald-500">$4000</span></li>
+</ul>
+</section>
+
+
+
+<!-- PEPAS -->
+<section class="bg-crema/90 rounded-xl p-4 shadow">
+<h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
+<i data-lucide="cookie" class="w-6 h-6 text-trigo"></i> Pepas
+</h2>
+<ul class="space-y-1">
+<li class="flex justify-between">Pepas grandes de frutos rojos <span class="text-emerald-500">$2500</span></li>
+<li class="flex justify-between">Pepas 250gr <span class="text-emerald-500">$7500</span></li>
+<li class="flex justify-between">Cuernitos 250gr <span class="text-emerald-500">$4500</span></li>
+</ul>
+</section>
+
+<!-- PAN DULCE -->
+<section class="bg-crema/90 rounded-xl p-4 shadow">
+<h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
+<i data-lucide="wheat" class="w-6 h-6 text-trigo"></i> Pan dulce
+</h2>
+<ul class="space-y-1">
+<li class="flex justify-between">Pan dulce con chips <span class="text-emerald-500">$6000</span></li>
+<li class="flex justify-between">Pan dulce con frutos secos <span class="text-emerald-500">$6000</span></li>
+</ul>
+</section>
+
+<!-- TARTAS -->
+<section class="bg-crema/90 rounded-xl p-4 shadow">
+<h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
+<i data-lucide="utensils" class="w-6 h-6 text-trigo"></i> Tartas
+</h2>
+<ul class="space-y-1">
+<li class="flex justify-between">Calabaza  <span class="text-emerald-500">$8000</span></li></li>
+<li class="flex justify-between">Atún  <span class="text-emerald-500">$8000</li>
+<li class="flex justify-between">Verduras  <span class="text-emerald-500">$8000</li>
+<li class="flex justify-between">Jamón y queso  <span class="text-emerald-500">$8000</li>
+</ul>
+</section>
+
+<!-- EMPANADAS -->
+<section class="bg-crema/90 rounded-xl p-4 shadow">
+<h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
+<i data-lucide="wheat" class="w-6 h-6 text-trigo"></i> Empanadas
+</h2>
+<ul class="space-y-1">
+<li class="flex justify-between">Roquefort con jamón <span class="text-emerald-500">$1700</span></li>
+<li class="flex justify-between">Jamón y queso <span class="text-emerald-500">$1700</span></li>
+<li class="flex justify-between">Pollo <span class="text-emerald-500">$1700</span></li>
+<li class="flex justify-between">Carne suave <span class="text-emerald-500">$1700</span></li>
+<li class="flex justify-between">Carne a cuchillo <span class="text-emerald-500">$1700</span></li>
+</ul>
+</section>
+
+<!-- JUGOS NATURALES -->
+<section class="bg-crema/90 rounded-xl p-4 shadow">
+<h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
+<i data-lucide="droplet" class="w-6 h-6 text-trigo"></i> Jugos Naturales
+</h2>
+<ul class="space-y-1">
+<li class="flex justify-between">Naranja <span class="text-emerald-500">$3400</span></li>
+<li class="flex justify-between">Pomelo <span class="text-emerald-500">$3400</span></li>
+<li class="flex justify-between">Naranja/frutilla <span class="text-emerald-500">$3400</span></li>
+<li class="flex justify-between">Limonada <span class="text-emerald-500">$3400</span></li>
+</ul>
+</section>
+
+<!-- GASEOSAS & AGUA -->
+<section class="bg-crema/90 rounded-xl p-4 shadow">
+<h2 class="font-titulo text-xl text-cafe mb-3 flex items-center gap-2">
+<i data-lucide="droplet" class="w-6 h-6 text-trigo"></i> Gaseosas & Agua
+</h2>
+<ul class="space-y-1">
+<li class="flex justify-between">Pepsi 500ml <span class="text-emerald-500">$2000</span></li>
+<li class="flex justify-between">Pepsi Black 500ml <span class="text-emerald-500">$2000</span></li>
+<li class="flex justify-between">Seven Up 500ml <span class="text-emerald-500">$2000</span></li>
+<li class="flex justify-between">Villavicencio 500ml <span class="text-emerald-500">$1100</span></li>
+<li class="flex justify-between">Villamanaos 600ml <span class="text-emerald-500">$700</span></li>
+</ul>
+</section>
+
+</main>
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
 
 </body>
 </html>
